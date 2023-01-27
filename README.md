@@ -1,5 +1,5 @@
 # FOODEE🍔🍕🍟🥳🤤😛
-This is a static website which i was developed In the 3rd year of my undergraduation in B.tech.
+This is a static website which I had developed in 2rd year of my undergraduation in B.tech.
 It was developed as a part of my fullstack development module project during my 4th semester.
 It was developed by using HTML5,CSS3,Javascript,Jsp,oracle database,Tomcat server.
 But I hosted only static pages only without any jsp code soon after i will update along with database and server.
