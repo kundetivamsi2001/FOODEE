@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Check out</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <style>
+        h1{
+            text-align: center;
+            color: Black;
+        }
+        
+        .payment{
+            align-content: center;
+            width:30%;
+            background-color: #558599;
+            padding:25px 15px 25px 15px;
+            border-radius: 8px;
+            font-family: 'Confortaa', cursive;
+        }
+        .billing{
+            align-content: center;
+            width:30%;
+            background-color: #558599;
+            padding:25px 15px 25px 15px;   
+            border-radius: 8px;
+            backdrop-filter: 50px;
+            font-family: 'Confortaa', cursive;
+        }
+        
+        input[type=number] {
+            background-color: #558599;
+            width: 100%;
+            padding: 5px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #f1f9fc;
+          }
+          input[type=text] {
+            background-color: #558599;
+            width: 100%;
+            padding: 5px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: none;
+            border-bottom: 2px solid #f1f9fc;
+          }
+          .date input[type=number]{
+              width:40%;
+          }
+          .icon-container {
+            margin-bottom: 10px;
+            padding: 0px 0;
+            font-size: 24px;
+          }
+         .payment input[type=checkbox]{
+              margin-left: 30px;
+          }
+          .pay input{
+              padding: 8px 8px 8px 8px;
+              color: #f1f9fc(243, 230, 230);
+              background-color: #e0eeef;
+              font-family: 'Confortaa', cursive;
+              font-weight: bold;
+              width: 40%;
+              border-radius: 5px;
+          }
+          .cancel button{
+            padding: 8px 8px 8px 8px;
+              color: #f1f9fc(243, 230, 230);
+              background-color: #e0eeef;
+              font-family: 'Confortaa', cursive;
+              font-weight: bold;
+              width: 40%;
+              border-radius: 5px;
+
+          }
+          
+          body{
+              background-image: url("images/paycover.jpg");
+              background-repeat: no-repeat;
+              background-size: cover;
+          }
+    </style>
+    <body>
+        <h1>Payment</h1>
+        <div class="checkout">
+            <table width=700px align="center">
+                <tr>
+                    <td class="billing">
+        <!--   <div class="billing">      --> 
+            <form action="payments.jsp" method="post">
+                
+                <h3>SHIFTING ADDRESS</h3><br><br><br>
+               
+                <label for="name"><i class="fa fa-user"></i> Full Name</label>
+                <input class="card" type="text" name="name" id="name" required=''><br><br>
+                <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                <input type="text" id="email" name="email" required="" >
+                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                <input type="text" id="adr" name="address" >
+                <label for="city"><i class="fa fa-institution"></i> City</label>
+                <input type="text" id="city" name="city">
+                <label for="zip">Pincode</label>
+                <input type="text" id="zip" name="pin" placeholder="10001">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+                <input type="checkbox" nname="sameadr" >
+                <label for="sameadr" >Shipping address is same as Billing address.</label><br><br>
+    
+            
+       <!-- </div>    -->
+        </td>
+        <td class="payment">
+     <!--   <div class="payment">      -->
+        
+            <h3>PAYMENT</h3>
+            <h3>Accepted Cards</h3>
+            <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <input  type="radio" name="mode" class="a1" value="card" >
+            <label for="card radio">Credit / Debit / ATM Card</label><br><br>
+            <label for="card">Card number</label>
+            <input class="card" type="number" name="card" id="card"><br><br>
+            <table>
+                <tr>
+                    <td>
+                    <label for="card">Expiry Date</label>
+                    <input class="date" type="number" name="carddate" id="expdt"><br>
+                    </td>
+                    <td>
+                    <label for="card">CVV</label>
+                    <input class="date" type="number" name="cvv" id="expdt"><br>
+                    </td>
+            </tr>
+            </table>
+            <input type="radio" name="mode" class="a1" value="upi"  >
+            <label for="upi">UPI</label><br><br>
+            <input type="radio" name="mode" class="a1" value="wallets" >
+            <label for="wallets">wallets</label><br><br>
+            <input type="radio" name="mode" class="a1" value="banking" >
+            <label for="banking">Net Bankings</label><br><br>
+            <input type="radio" name="mode" class="a1" value="cod" >
+            <label for="cod">Cash On Delivery</label><br><br>
+            <input type="checkbox" name="confirm" id="confiim">
+            <label for="confirm" style="font-size:20px;color:white">Confirm Order</label><br><br>
+            <center><div class="pay"><input type="submit" value="PAY"></div>
+            </center>
+
+        </form>
+        <center><div class="cancel"><a href="index.html"><button>CANCEL</button></a></div></center>
+   <!-- </div>   -->
+    </td>
+    </tr>
+    </table>
+</div>
+
+        
+    </body>
+</html>

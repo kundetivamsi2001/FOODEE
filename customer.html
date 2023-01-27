@@ -1,0 +1,51 @@
+<%@page import="java.sql.*"%>
+<%
+try{
+ Class.forName("oracle.jdbc.driver.OracleDriver");
+ Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","vamsi2001");
+ 
+String sql="select * from customers";
+PreparedStatement stmt=con.prepareStatement(sql);  
+ResultSet rs=stmt.executeQuery(); 
+%>
+<html>
+<body bgcolor="pink">
+<center>
+<h1>Welcome</h1>
+<h1>Welcome to customers Details</h1>
+<table border="5" bgcolor="white">
+<tr>
+
+
+<th colspan="5" align="center">CUSTOMER Details</th></tr>
+
+<tr>
+<td>NAME</td>
+<td>EMAIL</td>
+<td>PASSWORD</td>
+<td>ADDRESS</td>
+<td>MOBILE</td>
+</tr>
+<%
+while(rs.next())
+{
+%>
+<tr>
+<td><%=rs.getString("NAME")%></td>
+<td><%=rs.getString("EMAIL")%></td>
+<td><%=rs.getString("PASSWORD")%></td>
+<td><%=rs.getString("ADDRESS")%></td>
+<td><%=rs.getString("MOBILE")%></td>
+</tr>
+<%
+}
+%>
+</table>
+<br>
+<br>
+<% }
+catch(Exception e)
+{
+ out.println(e.toString());
+}
+%>
